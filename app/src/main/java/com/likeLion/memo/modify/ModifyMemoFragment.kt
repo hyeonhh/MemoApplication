@@ -1,4 +1,7 @@
 package com.likeLion.memo.modify
 
-class ModifyMemoFragment {
+import androidx.fragment.app.Fragment
+
+class ModifyMemoFragment : Fragment() {
+
 }

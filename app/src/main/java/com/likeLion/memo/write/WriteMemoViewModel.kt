@@ -1,4 +1,7 @@
 package com.likeLion.memo.write
 
-class WriteMemoViewModel {
+import androidx.lifecycle.ViewModel
+
+class WriteMemoViewModel : ViewModel() {
+
 }
