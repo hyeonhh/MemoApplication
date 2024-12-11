@@ -1,10 +1,11 @@
-package com.likeLion.memo
+package com.likeLion.memo.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.likeLion.memo.R
 import com.likeLion.memo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

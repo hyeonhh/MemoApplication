@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.navigation.safe.args)
+
 }
 
 android {
@@ -39,6 +41,20 @@ android {
 }
 
 dependencies {
+    implementation( libs.androidx.navigation.fragment.ktx)
+    implementation( libs.androidx.navigation.ui.ktx)
+
+    implementation (libs.converter.gson)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android.v139)
+
+    implementation (libs.kotlinx.coroutines.android)
+    implementation (libs.androidx.lifecycle.runtime.ktx)
+
+    implementation (libs.androidx.datastore.preferences)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+
     implementation(libs.androidx.fragment)
     // Kotlin
     implementation(libs.androidx.fragment.ktx)
@@ -48,6 +64,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.crashlytics.buildtools)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

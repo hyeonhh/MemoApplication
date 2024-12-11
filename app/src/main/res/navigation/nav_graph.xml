@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/showMemoListFragment">
+
+    <fragment
+        android:id="@+id/showMemoFragment"
+        android:name="com.likeLion.memo.ui.show.ShowMemoFragment"
+        android:label="ShowMemoFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_showMemoFragment_to_modifyMemoFragment"
+            app:destination="@id/modifyMemoFragment" />
+        <action
+            android:id="@+id/action_showMemoFragment_to_showMemoListFragment"
+            app:destination="@id/showMemoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyMemoFragment"
+        android:name="com.likeLion.memo.ui.modify.ModifyMemoFragment"
+        android:label="ModifyMemoFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_modifyMemoFragment_to_showMemoListFragment"
+            app:destination="@id/showMemoListFragment" />
+        <action
+            android:id="@+id/action_modifyMemoFragment_to_showMemoListFragment2"
+            app:destination="@id/showMemoListFragment" />
+        <action
+            android:id="@+id/action_modifyMemoFragment_to_showMemoListFragment3"
+            app:destination="@id/showMemoListFragment" />
+        <action
+            android:id="@+id/action_modifyMemoFragment_to_showMemoFragment"
+            app:destination="@id/showMemoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/writeMemoFragment"
+        android:name="com.likeLion.memo.ui.write.WriteMemoFragment"
+        android:label="WriteMemoFragment" >
+        <action
+            android:id="@+id/action_writeMemoFragment_to_showMemoListFragment"
+            app:destination="@id/showMemoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showMemoListFragment"
+        android:name="com.likeLion.memo.ui.list.ShowMemoListFragment"
+        android:label="ShowMemoListFragment" >
+        <action
+            android:id="@+id/action_showMemoListFragment_to_writeMemoFragment"
+            app:destination="@id/writeMemoFragment" />
+        <action
+            android:id="@+id/action_showMemoListFragment_to_showMemoFragment"
+            app:destination="@id/showMemoFragment" />
+        <action
+            android:id="@+id/action_showMemoListFragment_to_updateMemoFragment"
+            app:destination="@id/modifyMemoFragment" />
+    </fragment>
+</navigation>
